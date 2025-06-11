@@ -33,29 +33,36 @@ function Home() {
 
   return (
     <div className="home-container">
-      <h2>🍷 Wine & Food Pairing</h2>
-      <p>Type a food to discover the best wine pairings!</p>
+  <h2>🍷 Wine & Food Pairing</h2>
+  <p>Type a food to discover the best wine pairings!</p>
 
-      <form onSubmit={handleSearch} className="search-form">
-        <input
-          type="text"
-          value={food}
-          onChange={(e) => setFood(e.target.value)}
-          placeholder="e.g. pizza, cheese, steak"
-        />
-        <button type="submit">Find Wine</button>
-      </form>
+  {/* <img
+    src="/images/roberta-sorge-IywM7AQTZcM-unsplash.jpg"
+    alt="Wine Background"
+    className="blurred-wine-image"
+  /> */}
 
-      {error && <p className="error">{error}</p>}
+  <form onSubmit={handleSearch} className="search-form">
+    <input
+      type="text"
+      value={food}
+      onChange={(e) => setFood(e.target.value)}
+      placeholder="e.g. pizza, cheese, steak"
+    />
+    <button type="submit">Find Wine</button>
+  </form>
 
-      {result && (
-        <WineCard
-          wine={result.pairedWines?.[0] || "No wine found"}
-          description={result.pairingText}
-          pairings={result.pairedWines}
-        />
-      )}
-    </div>
+  {error && <p className="error">{error}</p>}
+
+  {result && (
+    <WineCard
+      wine={result.pairedWines?.[0] || "No wine found"}
+      description={result.pairingText}
+      pairings={result.pairedWines}
+    />
+  )}
+</div>
+
   );
 }
 

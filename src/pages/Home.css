@@ -1,14 +1,16 @@
 .home-container {
-    min-height: 100vh;
-    background: linear-gradient(to right, #f7f1e3, #e9ecef); /* soft gradient */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 4rem 1rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-  }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
   
   .home-container h2 {
     font-size: 2.5rem;
@@ -59,4 +61,15 @@
     color: red;
     margin-top: 1rem;
   }
-  
+
+  body::before {
+    content: "";
+    background: url("/images/klara-kulikova-CPMZguYURMw-unsplash.jpg") no-repeat center center/cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(10px) brightness(0.5);
+    z-index: -1;
+  }  
