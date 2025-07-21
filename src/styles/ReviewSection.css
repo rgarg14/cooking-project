@@ -1,0 +1,30 @@
+.review-section {
+    margin-top: 24px;
+    text-align: left;
+  }
+  
+  .review-section textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: none;
+  }
+  
+  .review-section button {
+    padding: 10px 16px;
+    background-color: #7a1e1e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .review-section ul {
+    margin-top: 16px;
+    padding-left: 20px;
+    list-style: disc;
+  }
+  
