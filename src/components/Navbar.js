@@ -12,6 +12,7 @@ export default function Navbar() {
         <a href="/signup">Signup</a>
         <a href="/login">Login</a>
         <a href="/cart">Cart</a>
+        {/* <a href="/AgeVerification">Age</a> */}
       </div>
     </nav>
   );
